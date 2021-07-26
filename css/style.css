@@ -1,3 +1,118 @@
+body {
+    margin: 0;
+}
+
+header {
+    display:flex;
+    background: salmon;
+    padding: 0.5em 1em;
+    justify-content: space-between;
+}
+
+#company-name {
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+#nav-links > ul > li {
+    padding: 0.8em;
+    border-radius: 50px;
+    margin: 5px;
+    transition: background 1s;
+}
+
+#nav-links > ul > li:hover {
+    background: white;
+    box-shadow: 1px 1px 0 rgba (0,0,0, 0.5);
+}
+
+#nav-links > ul > li:hover {
+    text-decoration: none;
+    white-space: nowrap;
+    color:white;
+}
+
+#nav-links > ul > li:hover > a {
+    color:teal;
+}
+
+
+#portrait {
+    height: 400px;
+    width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * { box-sizing: border-box; }
 
 
@@ -29,7 +144,7 @@
     width: 200px;
     height: 150px;
     object-fit: cover;
-    /*try "contain*/
+    /* try "contain" */
 }
 
 nav {
@@ -98,13 +213,6 @@ p {
     flex-direction: column;
 }
 
-
-#portrait {
-    height: 400px;
-    width: 400px;
-}
-
-
 #portrait-container {
     display: flex;
     flex-direction: column;
@@ -133,20 +241,19 @@ header {
 }
 
 .flex-container {
-    /* We first create a flex layout context */
-    display: flex;
-    
-    /* Then we define the flow direction 
+    /* We first create a flex layout context 
+     
+    Then we define the flow direction 
        and if we allow the items to wrap 
      * Remember this is the same as:
      * flex-direction: row;
      * flex-wrap: wrap;
-     */
-    flex-flow: row wrap;
     
-    /* Then we define how is distributed the remaining space */
+    /*Then we define how is distributed the remaining space */
+    
     justify-content: space-around;
-    
+    flex-flow: row wrap;
+    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
