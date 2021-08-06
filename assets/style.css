@@ -1,12 +1,17 @@
 body {
     margin: 0;
+    background-color: #6AA695;
+    font-family: Arial;
+    color: #B8D9C6;
 }
 
 header {
     display:flex;
-    background: salmon;
+    background: #347367;
     padding: 0.5em 1em;
     justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 #company-name {
@@ -22,7 +27,7 @@ header {
 }
 
 #nav-links > ul > li:hover {
-    background: white;
+    background:#B8D9C6;
     box-shadow: 1px 1px 0 rgba (0,0,0, 0.5);
 }
 
@@ -33,15 +38,34 @@ header {
 }
 
 #nav-links > ul > li:hover > a {
-    color:teal;
+    color:#1C5359;
 }
 
+section {
+    padding:2em 1em;
+}
 
 #portrait {
+    display: flex;
+    justify-content: center;
     height: 400px;
     width: 400px;
 }
 
+#side-column {
+    background-color: #333;
+    
+
+}
+
+#side-column > ul {
+    display:flex;
+    flex-direction: column;
+}
+
+#side-column > ul > li {
+    display:flex;
+}
 
 
 
@@ -121,23 +145,30 @@ header {
     margin-top: 0px;
     padding: 0px;
     text-align: left;
-    background: black;
-    color: #fff;
+    color: #593227;
 }
 
 
 
 #company-name {
-    background-color: black;
+    background-color: #193140;
     box-sizing: border-box;
-    color: blanchedalmond;
+    color: #B8D9C6;
     font-family: Arial;
     text-decoration: none;
     padding: .5em;
     font-size: 1.3em;
     font-weight: bolder;
+    height: 52px;
+}
 
-  
+#company-name > span {
+    transition: all 0.5s;
+    font-size: 0;
+}
+
+#company-name:hover > span {
+    font-size: 1.3em;
 }
 
 #frostimage {
@@ -146,6 +177,7 @@ header {
     object-fit: cover;
     /* try "contain" */
 }
+
 
 nav {
     
@@ -165,7 +197,7 @@ ul {
 
 
 a {
-    color: blanchedalmond;
+    color: #B8D9C6;
     font-family: Arial;
     text-decoration: none;
     padding: .5em; width: 4em; 
@@ -185,33 +217,20 @@ a:hover {
 }
 
 
-body {
-    background-color: black;
-    font-family: Arial;
-    color: blanchedalmond;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
 p {
     font-size: 1.3em;
 }
 
+
 .column-layout {
     max-width: 1300px;
-    background-color:black;
+    background-color:193140;
     margin: 20px auto 0 auto;
     padding-top: 0px;
     display: flex;
     flex-direction: column;
 }
+
 
 #portrait-container {
     display: flex;
@@ -223,15 +242,6 @@ p {
 }
     
 
-header {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-
 #main-content {
     display: flex;
     flex-direction: row;
@@ -239,6 +249,7 @@ header {
     padding-top: 325px;
     padding-bottom: 325px;
 }
+
 
 .flex-container {
     /* We first create a flex layout context 
@@ -249,7 +260,7 @@ header {
      * flex-direction: row;
      * flex-wrap: wrap;
     
-    /*Then we define how is distributed the remaining space */
+    Then we define how is distributed the remaining space */
     
     justify-content: space-around;
     flex-flow: row wrap;
@@ -259,19 +270,15 @@ header {
     list-style: none;
   }
   
-  #sidecolumn-two {
-      width: 50%;
-  }
-
 
   .flex-item {
-    background: tomato;
+    background: #1C5359;
     padding: 5px;
     width: 200px;
     height: 150px;
     margin-top: 10px;
     line-height: 150px;
-    color: white;
+    color: #B8D9C6;
     font-weight: bold;
     font-size: 1.3em;
     text-align: center;
@@ -289,8 +296,8 @@ footer {
     padding-top: 325px;
     border-top: 10px solid;
     border-top: #221811;
-    background-color: #500000;
-    color:#CC9933;
+    background-color: #B8D9C6;
+    color:#193140;
     text-align: center;
 }
 
