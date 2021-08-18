@@ -1,9 +1,17 @@
+/* the universal seslector is used to establish the "box-sizing" attribute with the value set to "border-box" throughout the page.
+ This tells the browser to account for any border and padding in the elements height and width value */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #6AA695;
-    font-family: Arial;
+    font-family: Roboto;
     color: #B8D9C6;
 }
+
 
 header {
     display:flex;
@@ -14,10 +22,34 @@ header {
     margin-top: 0px;
 }
 
-#company-name {
-    font-family: Roboto;
+
+#company-name {        
+    background-color: #193140; 
+    box-sizing: border-box;
+    color: #B8D9C6;  
+    text-decoration: none;         
+    font-family: Roboto;                            
     font-weight: 400;
+    padding: .5em;
+    font-size: 1.3em;
+    font-weight: bolder;
+    height: 52px;
 }
+
+/* sets the first letter in both words to "span" across the rest of the words */
+
+#company-name > span {
+    transition: all 0.5s;
+    font-size: 0;
+}
+
+/* removes the "span" effect causing the rest of the letters to reveal themselves giving it the animated effect */
+
+#company-name:hover > span {
+    font-size: 1.3em;
+}
+
+/* sets the nav links to have a transition background */
 
 #nav-links > ul > li {
     padding: 0.8em;
@@ -26,10 +58,13 @@ header {
     transition: background 1s;
 }
 
+/* the next three styles reveals the transition background when the mouse hovers over and causes the lettering to change color */
+
 #nav-links > ul > li:hover {
     background:#B8D9C6;
     box-shadow: 1px 1px 0 rgba (0,0,0, 0.5);
 }
+
 
 #nav-links > ul > li:hover {
     text-decoration: none;
@@ -37,148 +72,12 @@ header {
     color:white;
 }
 
+
 #nav-links > ul > li:hover > a {
     color:#1C5359;
 }
 
-section {
-    padding:2em 1em;
-}
-
-#portrait {
-    display: flex;
-    justify-content: center;
-    height: 400px;
-    width: 400px;
-}
-
-#side-column {
-    background-color: #333;
-    
-
-}
-
-#side-column > ul {
-    display:flex;
-    flex-direction: column;
-}
-
-#side-column > ul > li {
-    display:flex;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* { box-sizing: border-box; }
-
-
-#header {
-    width:100%;
-    margin-top: 0px;
-    padding: 0px;
-    text-align: left;
-    color: #593227;
-}
-
-
-
-#company-name {
-    background-color: #193140;
-    box-sizing: border-box;
-    color: #B8D9C6;
-    font-family: Arial;
-    text-decoration: none;
-    padding: .5em;
-    font-size: 1.3em;
-    font-weight: bolder;
-    height: 52px;
-}
-
-#company-name > span {
-    transition: all 0.5s;
-    font-size: 0;
-}
-
-#company-name:hover > span {
-    font-size: 1.3em;
-}
-
-#frostimage {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    /* try "contain" */
-}
-
-
+/* the next two styles sets the nav to align right, inline, and sets the padding */
 nav {
     
     text-align: right;  
@@ -187,6 +86,78 @@ nav {
 
 header nav ul li {
     display: inline;
+} 
+
+
+    #portrait-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 40px;
+    } 
+
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    #portrait {
+    height: 300px;
+    width: 300px;
+}
+
+
+.flex-container {
+    justify-content: space-around;
+    flex-flow: row wrap;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+
+#work {
+    background-color: #333;   
+}
+
+section {
+    padding:2em 1em;
+}
+
+#work > ul {
+    display:flex;
+    flex-direction: column;
+}
+
+
+#work > ul > li {
+    display:flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#frostimage {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
 }
 
 
@@ -198,22 +169,10 @@ ul {
 
 a {
     color: #B8D9C6;
-    font-family: Arial;
+    font-family: Roboto;
     text-decoration: none;
     padding: .5em; width: 4em; 
-    font-size: 1.3em; 
-    font-weight: bolder;
-}
-
-
-#nav_links2 {
-    text-align: left;
-    text-decoration: none;
-}
-
-
-a:hover { 
-    color: brown;
+    font-size: 1.3em;  
 }
 
 
@@ -232,16 +191,6 @@ p {
 }
 
 
-#portrait-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding-top: 40px;
-}
-    
-
 #main-content {
     display: flex;
     flex-direction: row;
@@ -250,26 +199,6 @@ p {
     padding-bottom: 325px;
 }
 
-
-.flex-container {
-    /* We first create a flex layout context 
-     
-    Then we define the flow direction 
-       and if we allow the items to wrap 
-     * Remember this is the same as:
-     * flex-direction: row;
-     * flex-wrap: wrap;
-    
-    Then we define how is distributed the remaining space */
-    
-    justify-content: space-around;
-    flex-flow: row wrap;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
 
   .flex-item {
     background: #1C5359;
@@ -283,11 +212,6 @@ p {
     font-size: 1.3em;
     text-align: center;
   }
-
-
-.flex-item:first-of-type {
-    background: none;
-}
 
 
 footer {
