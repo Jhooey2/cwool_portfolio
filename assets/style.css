@@ -1,9 +1,9 @@
 /* the universal seslector is used to establish the "box-sizing" attribute with the value set to "border-box" throughout the page.
  This tells the browser to account for any border and padding in the elements height and width value */
-
 * {
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -37,20 +37,17 @@ header {
 }
 
 /* sets the first letter in both words to "span" across the rest of the words */
-
 #company-name > span {
     transition: all 0.5s;
     font-size: 0;
 }
 
 /* removes the "span" effect causing the rest of the letters to reveal themselves giving it the animated effect */
-
 #company-name:hover > span {
     font-size: 1.3em;
 }
 
 /* sets the nav links to have a transition background */
-
 #nav-links > ul > li {
     padding: 0.8em;
     border-radius: 50px;
@@ -59,7 +56,6 @@ header {
 }
 
 /* the next three styles reveals the transition background when the mouse hovers over and causes the lettering to change color */
-
 #nav-links > ul > li:hover {
     background:#B8D9C6;
     box-shadow: 1px 1px 0 rgba (0,0,0, 0.5);
@@ -77,7 +73,7 @@ header {
     color:#1C5359;
 }
 
-/* the next two styles sets the nav to align right, inline, and sets the padding */
+/* the next two styles sets the nav to align right, inline */
 nav {
     
     text-align: right;  
@@ -89,7 +85,8 @@ header nav ul li {
 } 
 
 
-    #portrait-container {
+/* sets the container that the portrait, h2, and intro paragraph fits into */
+#portrait-container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -99,7 +96,8 @@ header nav ul li {
     padding-top: 40px;
     } 
 
-    h2 {
+ /* sets the parameter of the name above the portrait */
+h2 {
         display: block;
         font-size: 1.5em;
         margin-block-start: 0.83em;
@@ -109,50 +107,137 @@ header nav ul li {
         font-weight: bold;
     }
 
-    #portrait {
+
+#portrait {
     height: 300px;
     width: 300px;
 }
 
-
-.flex-container {
+/* sets the container that the skills~ unordered list fits in */
+.skills-container {
+    background: #1C5359;
     justify-content: space-around;
     flex-flow: row wrap;
     display: flex;
     padding: 0;
     margin: 0;
+    border: 0;
     list-style: none;
   }
 
 
+#skills {
+    justify-content: space-around;
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 50px;
+}
+
+ /* applies to the skills section */
+.flex-item {
+    
+    justify-content: space-around;
+    background: #1C5359;
+    border: #1C5359;
+    padding: 5px;
+    width: 400px;
+    height: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 150px;
+    color: #B8D9C6;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+/* applies to the work section */
+  .flex-item1 {
+    
+    justify-content: space-around;
+    background: #1C5359;
+    border: #1C5359;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+    margin-right: 8px;
+    line-height: 150px;
+    color: #B8D9C6;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+
+  .flex-item2 {
+    justify-content: space-around;  
+    background: #1C5359;
+    border: #1C5359;
+    padding: 5px;
+    width: 400px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+    margin-right: 8px;
+    line-height: 150px;
+    color: #B8D9C6;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+
+  .flex-item3 {
+    justify-content: space-around;  
+    background: #1C5359;
+    border: #1C5359;
+    padding: 5px;
+    width: 400px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+    margin-right: 8px;
+    line-height: 150px;
+    color: #B8D9C6;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+ 
+
+/* next 5 styles apply to the work id and sets differences in the work id ul and li elements */
 #work {
     background-color: #333;   
 }
 
-section {
+
+ section {
     padding:2em 1em;
 }
+
 
 #work > ul {
     display:flex;
     flex-direction: column;
 }
 
-
 #work > ul > li {
     display:flex;
 }
 
-
-
-
-
-
-
-
-
-
-
+/* set paragraph margin */
+#work > ul > li > p {
+    margin: 25px;
+}
 
 #frostimage {
     width: 200px;
@@ -161,6 +246,8 @@ section {
 }
 
 
+
+/* applies styles that apply to all ul and a elements */
 ul {
     list-style: none;
     padding: 0;
@@ -171,47 +258,11 @@ a {
     color: #B8D9C6;
     font-family: Roboto;
     text-decoration: none;
-    padding: .5em; width: 4em; 
+    padding: 0px; 
     font-size: 1.3em;  
 }
 
 
-p {
-    font-size: 1.3em;
-}
-
-
-.column-layout {
-    max-width: 1300px;
-    background-color:193140;
-    margin: 20px auto 0 auto;
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-}
-
-
-#main-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 325px;
-    padding-bottom: 325px;
-}
-
-
-  .flex-item {
-    background: #1C5359;
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    line-height: 150px;
-    color: #B8D9C6;
-    font-weight: bold;
-    font-size: 1.3em;
-    text-align: center;
-  }
 
 
 footer {
@@ -227,9 +278,10 @@ footer {
 
 
 footer a {
-    font-size: 1em;
-    
+    font-size: 1em;   
 }
+
+
  @media screen and (max-width: 768px)  {
      main,
      nav {
